@@ -11,8 +11,14 @@ import net.minecraft.util.registry.Registry;
 
 public class ItemCore {
 
-    public static final Item APPLE_PIE = new Item(new FabricItemSettings().group(ModItemGroup.VALHALLA));
-    public static final Item BERRY_PIE = new Item(new FabricItemSettings().group(ModItemGroup.VALHALLA));
+    public static final Item APPLE_PIE = new Item(new FabricItemSettings()
+            .group(ModItemGroup.VALHALLA)
+            .food(FoodCore.APPLE_PIE)
+    );
+    public static final Item BERRY_PIE = new Item(new FabricItemSettings()
+            .group(ModItemGroup.VALHALLA)
+            .food(FoodCore.BERRY_PIE)
+    );
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(ModCore.MOD_ID, name), item);
