@@ -1,4 +1,4 @@
-package net.angela.valhalla.mixin;
+package net.angela.project_valhalla.mixin;
 
 import net.minecraft.client.gui.screen.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;

@@ -18,15 +18,11 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.angela.valhalla.Main"
-    ],
-    "client": [
-      "net.angela.valhalla.Client"
-      ]
-
+      "net.angela.project_valhalla.ModCore"
+    ]
   },
   "mixins": [
-    "valhalla.mixins.json"
+    "project_valhalla.mixins.json"
   ],
 
   "depends": {

@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "net.angela.valhalla.mixin",
+  "package": "net.angela.project_valhalla.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
   ],
