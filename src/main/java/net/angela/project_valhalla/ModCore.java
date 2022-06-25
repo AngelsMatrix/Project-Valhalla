@@ -1,5 +1,7 @@
 package net.angela.project_valhalla;
 
+import net.angela.project_valhalla.block.BlocksCore;
+import net.angela.project_valhalla.item.ItemCore;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -15,8 +17,8 @@ public class ModCore implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModCore.LOGGER.debug("Execute://ItemRegister(All)");
-		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "apple_pie"), APPLE_PIE);
-		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "berry_pie"), BERRY_PIE);
+		ItemCore.registerFoodItems();
+		BlocksCore.registerBlocks();
 
 	}
 }
