@@ -13,17 +13,20 @@ import net.minecraft.util.registry.Registry;
 
 public class BlocksCore {
 
-
+    //List of all blocks to be registered
     public static final Block OVEN = new Block(FabricBlockSettings.of(Material.STONE));
 
     //Registers new Block and its BlockItem
     private static Block registerNewBlock(String name, Block block, ItemGroup itemGroup) {
-        ModCore.LOGGER.debug("Execute://BlockRegister(All)");
+        //Debugger
+        ModCore.LOGGER.debug("Execute://BlockRegister("+name+")");
+        //
         BlockItem blockItem = new BlockItem(block, new FabricItemSettings().group(itemGroup));
         Registry.register(Registry.ITEM, new Identifier(ModCore.MOD_ID, name), blockItem);
         return Registry.register(Registry.BLOCK, new Identifier(ModCore.MOD_ID, name), block);
     }
 
+    //Method to pass to ModCore to register all new blocks in one call.
     public static void registerBlocks() {
         registerNewBlock("oven", OVEN, ItemGroupCore.VALHALLA);
     }

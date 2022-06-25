@@ -6,6 +6,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 
 public class ItemGroupCore {
+
+    //This class establishes the Project: Valhalla creative tab.
     public static final net.minecraft.item.ItemGroup VALHALLA = FabricItemGroupBuilder.build(
             new Identifier(ModCore.MOD_ID, "project_valhalla"),
             () -> new ItemStack(ItemCore.APPLE_PIE));

@@ -20,10 +20,12 @@ public class ItemCore {
             .food(FoodComponentCore.BERRY_PIE)
     );
 
+    //Common method to register any generic item
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(ModCore.MOD_ID, name), item);
     }
 
+    //Pass to ModCore to register all new items in one call.
     public static void registerFoodItems() {
         ModCore.LOGGER.debug("Execute://ItemRegister(All)");
         Registry.register(Registry.ITEM, new Identifier(ModCore.MOD_ID, "apple_pie"), APPLE_PIE);
