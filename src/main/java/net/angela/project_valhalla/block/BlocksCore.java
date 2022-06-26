@@ -20,9 +20,11 @@ public class BlocksCore {
     private static Block registerNewBlock(String name, Block block, ItemGroup itemGroup) {
         //Debugger
         ModCore.LOGGER.debug("Execute://BlockRegister("+name+")");
-        //
+        //Temporary blockItem placement
         BlockItem blockItem = new BlockItem(block, new FabricItemSettings().group(itemGroup));
+        //Register the item
         Registry.register(Registry.ITEM, new Identifier(ModCore.MOD_ID, name), blockItem);
+        //Return a registry for the block
         return Registry.register(Registry.BLOCK, new Identifier(ModCore.MOD_ID, name), block);
     }
 
